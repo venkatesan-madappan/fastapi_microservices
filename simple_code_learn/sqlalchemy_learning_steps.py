@@ -8,8 +8,8 @@ from sqlalchemy import create_engine, text, URL
 from sqlalchemy import text, Column, Integer
 
 #central source of connections to a particular database
-url_object = URL.create("postgresql+psycopg2",username="venkatesan",
-    password="Sriviviji@101",host="localhost",port="5432", database="fcms")
+url_object = URL.create("postgresql+psycopg2",username="username",
+    password="password",host="localhost",port="5432", database="fcms")
 db_engine = create_engine(url_object, echo=True)
 
 '''
