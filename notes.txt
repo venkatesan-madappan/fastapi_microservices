@@ -1,6 +1,10 @@
-uvicorn main:app
+uvicorn main:app --reload
 
 http://127.0.0.1:8000/level1/index
 
 
-Fast API Swagger UI : http://127.0.0.1:8000/docs#/
+Fast API Swagger UI : http://127.0.0.1:8000/docs
+
+Software Design Principle
+
+DRY (Don't Repeat Yourself)

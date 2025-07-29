@@ -1,0 +1,28 @@
+Log: [3e761ad1-c90a-4ad1-8c9c-49f936c3cc1c: 2025-07-24T15:34:12.033061+0530 - INFO - Request to access /docs 
+Log: [3e761ad1-c90a-4ad1-8c9c-49f936c3cc1c: 2025-07-24T15:34:12.034889+0530 - INFO - Successfully accessed /docs 
+Log: [61c8f12a-e479-4ebb-b221-27db54a362a8: 2025-07-24T15:34:12.138292+0530 - INFO - Request to access /openapi.json 
+Log: [61c8f12a-e479-4ebb-b221-27db54a362a8: 2025-07-24T15:34:12.139766+0530 - INFO - Successfully accessed /openapi.json 
+Log: [3b3abb94-3ba1-4440-8ae0-59baaafe0957: 2025-07-24T15:34:21.078208+0530 - INFO - Request to access /level4/university/1 
+Log: [3b3abb94-3ba1-4440-8ae0-59baaafe0957: 2025-07-24T15:34:21.079789+0530 - INFO - Successfully accessed /level4/university/1 
+Log: [d3607e3a-94f7-447a-8c96-d2596ab52dd4: 2025-07-24T15:34:21.082143+0530 - INFO - Request to access /level4/student/index 
+Log: [d3607e3a-94f7-447a-8c96-d2596ab52dd4: 2025-07-24T15:34:21.089042+0530 - INFO - Successfully accessed /level4/student/index 
+Log: [6f20dfc8-84cf-4b09-ad88-cfa13e9de20f: 2025-07-24T15:35:39.704719+0530 - INFO - Request to access /level4/university/0 
+Log: [6f20dfc8-84cf-4b09-ad88-cfa13e9de20f: 2025-07-24T15:35:39.706089+0530 - INFO - Successfully accessed /level4/university/0 
+Log: [5c6e0e64-1721-4480-9e3c-9d1e16b9ed32: 2025-07-24T15:35:52.218764+0530 - INFO - Request to access /level4/university/1 
+Log: [5c6e0e64-1721-4480-9e3c-9d1e16b9ed32: 2025-07-24T15:35:52.219996+0530 - INFO - Successfully accessed /level4/university/1 
+Log: [4399847d-020a-4934-9885-246ff4da80d0: 2025-07-24T15:35:52.222836+0530 - INFO - Request to access /level4/student/index 
+Log: [4399847d-020a-4934-9885-246ff4da80d0: 2025-07-24T15:35:52.226283+0530 - INFO - Successfully accessed /level4/student/index 
+Log: [be386e57-21c4-479f-8204-5e128a3a6092: 2025-07-24T15:35:55.392725+0530 - INFO - Request to access /level4/university/2 
+Log: [be386e57-21c4-479f-8204-5e128a3a6092: 2025-07-24T15:35:55.394118+0530 - INFO - Successfully accessed /level4/university/2 
+Log: [23841b37-b101-4c78-ae25-dbea6701ef18: 2025-07-24T15:35:55.397641+0530 - INFO - Request to access /level4/faculty/index 
+Log: [23841b37-b101-4c78-ae25-dbea6701ef18: 2025-07-24T15:35:55.400513+0530 - INFO - Successfully accessed /level4/faculty/index 
+Log: [565d82d2-7dc7-4f36-81ae-31329eb89a57: 2025-07-24T15:35:58.632188+0530 - INFO - Request to access /level4/university/3 
+Log: [565d82d2-7dc7-4f36-81ae-31329eb89a57: 2025-07-24T15:35:58.633546+0530 - INFO - Successfully accessed /level4/university/3 
+Log: [4c07c5f0-119a-46d3-9ba0-98e97a88dc00: 2025-07-24T15:35:58.636034+0530 - INFO - Request to access /level4/library/index 
+Log: [4c07c5f0-119a-46d3-9ba0-98e97a88dc00: 2025-07-24T15:35:58.638065+0530 - INFO - Successfully accessed /level4/library/index 
+Log: [f98149a0-f182-42ad-869a-e322f2220737: 2025-07-24T15:36:10.924943+0530 - INFO - Request to access /level4/university/0 
+Log: [f98149a0-f182-42ad-869a-e322f2220737: 2025-07-24T15:36:10.926745+0530 - INFO - Successfully accessed /level4/university/0 
+Log: [27cf4f93-dfab-4549-9345-c3b20a2fe3a2: 2025-07-24T15:36:54.758285+0530 - INFO - Request to access /level4/student/index 
+Log: [27cf4f93-dfab-4549-9345-c3b20a2fe3a2: 2025-07-24T15:36:54.761166+0530 - INFO - Successfully accessed /level4/student/index 
+Log: [7252d5ab-ef35-4c1b-aa25-5bd2b3ac7c0b: 2025-07-24T15:36:54.828552+0530 - INFO - Request to access /favicon.ico 
+Log: [7252d5ab-ef35-4c1b-aa25-5bd2b3ac7c0b: 2025-07-24T15:36:54.829076+0530 - INFO - Successfully accessed /favicon.ico 
