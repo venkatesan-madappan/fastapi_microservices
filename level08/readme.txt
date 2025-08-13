@@ -1,0 +1,1 @@
+Application name : NewsStand management System

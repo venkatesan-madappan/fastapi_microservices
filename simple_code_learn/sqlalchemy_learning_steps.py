@@ -8,8 +8,8 @@ from sqlalchemy import create_engine, text, URL
 from sqlalchemy import text, Column, Integer
 
 #central source of connections to a particular database
-url_object = URL.create("postgresql+psycopg2",username="username",
-    password="password",host="localhost",port="5432", database="fcms")
+url_object = URL.create("postgresql+psycopg2",username="venkatesan",
+    password="Sriviviji@101",host="localhost",port="5432", database="fcms")
 db_engine = create_engine(url_object, echo=True)
 
 '''
@@ -141,7 +141,7 @@ sessionmaker is to provide a factory for Session objects with a fixed configurat
 from sqlalchemy.orm import sessionmaker
 
 # a sessionmaker(), also in the same scope as the engine
-Session = sessionmaker(db_engine)
+Session = sessionmaker(bind=db_engine)
 
 '''
 # we can now construct a Session() without needing to pass the
@@ -158,11 +158,72 @@ When you write your application, the sessionmaker factory should be scoped the s
 created by create_engine(), which is typically at module-level or global scope. As these objects are 
 both factories, they can be used by any number of functions and threads simultaneously.
 '''
+'''
 # we can now construct a Session() and include begin()/commit()/rollback()
 # at once
 with Session.begin() as session:
     session.add(MyModel(id=13, x=11, y=111))
     session.add(MyModel(id=14, x=11, y=111))
 # commits the transaction, closes the session
+'''
+'''
+Querying
+ select() construct to create a Select object, which is then executed to return a result using methods such as 
+ Session.execute() and Session.scalars()
+ https://docs.sqlalchemy.org/en/20/orm/queryguide/index.html
+'''
 
-# Querying
+from sqlalchemy import select
+
+with Session() as session:
+    # query for ``User`` objects
+    statement = select(MyModel).filter_by(id=12)
+
+    # list of ``User`` objects
+    # user_obj = session.scalars(statement).all()
+    user_obj = session.execute(statement).all()
+
+    print("==================================")
+    print(user_obj)
+    print("==================================")
+    # query for individual columns
+    statement = select(MyModel.x, MyModel.y)
+
+    # list of Row objects
+    rows = session.execute(statement).all()
+    print("==================================")
+    print(rows)
+    print("==================================")
+
+model = MyModel(id=33, x=11, y=111)
+model_1 = MyModel(id=34, x=11, y=111)
+model_2 = MyModel(id=35, x=11, y=111)
+model_3 = MyModel(id=36, x=11, y=111)
+
+session.add(model)
+session.add_all([model_1, model_2, model_3])
+'''
+Delete is a tricky one, we need to take care of the relationship
+'''
+session.delete(model_1)
+
+'''
+session.flush()	Sends SQL to the DB (e.g., INSERT/UPDATE) but doesn't commit
+session.commit()	Flushes and commits (ends transaction)
+session.rollback()	Undoes uncommitted changes
+'''
+# Flushing
+session.flush() 
+
+#Get by Primary Key
+my_user = session.get(MyModel, 5)
+
+
+'''
+The concurrency model for SQLAlchemy’s Session and AsyncSession is therefore Session per thread, 
+AsyncSession per task. An application that uses multiple threads, or multiple tasks in asyncio such as 
+when using an API like asyncio.gather() would want to ensure that each thread has its own Session, each 
+asyncio task has its own AsyncSession.
+'''
+
+
